@@ -315,6 +315,11 @@ Prefab:
       propertyPath: speed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 82883296822007188, guid: 88af1bf878e9f8942af602cd8bfcfab8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88af1bf878e9f8942af602cd8bfcfab8, type: 2}
   m_IsPrefabParent: 0
@@ -1184,6 +1189,7 @@ GameObject:
   - component: {fileID: 557580500}
   - component: {fileID: 557580499}
   - component: {fileID: 557580498}
+  - component: {fileID: 557580503}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1261,6 +1267,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+--- !u!114 &557580503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557580497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3f6fb761a421f408bb31064fc70219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1034075284}
+  smoothing: 5
 --- !u!1 &588627305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2000,6 +2019,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 230, z: 0}
+--- !u!4 &1034075284 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4634279693574328, guid: 88af1bf878e9f8942af602cd8bfcfab8,
+    type: 2}
+  m_PrefabInternal: {fileID: 117016580}
 --- !u!1 &1091732043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,7 +2055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1985570633}
   enemy: {fileID: 1832878309381424, guid: 3ebfa01ec511f504290f1e208ede46fd, type: 2}
-  spawnTime: 3
+  spawnTime: 12
   spawnPoints:
   - {fileID: 283505330}
 --- !u!114 &1091732045
@@ -2047,7 +2071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1985570633}
   enemy: {fileID: 1154848713584014, guid: 82f683c52d548c04fb31aaba26937eec, type: 2}
-  spawnTime: 3
+  spawnTime: 10
   spawnPoints:
   - {fileID: 471240452}
 --- !u!114 &1091732046
@@ -2063,7 +2087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1985570633}
   enemy: {fileID: 1466530739527854, guid: 2724de753bd2c044b997de267e8d22c3, type: 2}
-  spawnTime: 7
+  spawnTime: 8
   spawnPoints:
   - {fileID: 1028687764}
 --- !u!4 &1091732047
