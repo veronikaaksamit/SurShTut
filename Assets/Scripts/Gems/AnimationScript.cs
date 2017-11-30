@@ -26,9 +26,9 @@ public class AnimationScript : MonoBehaviour {
     private float scaleTimer;
 
 	// Use this for initialization
-	void Start () {
-	
-	}
+	void Awake () {
+	    transform.Rotate(Vector3.right, -90);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -39,6 +39,7 @@ public class AnimationScript : MonoBehaviour {
         {
             if(isRotating)
             {
+               
                 transform.Rotate(rotationAngle * rotationSpeed * Time.deltaTime);
             }
 
