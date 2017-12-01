@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33435423693138194}
   - component: {fileID: 23377979662061436}
   - component: {fileID: 114890240728868636}
+  - component: {fileID: 114112760829258284}
+  - component: {fileID: 64078640612968750}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -81,6 +83,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1394903317702630}
   m_Mesh: {fileID: 4300000, guid: 3be870bd3141f9741b70abdfb4242cb6, type: 3}
+--- !u!64 &64078640612968750
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394903317702630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 3be870bd3141f9741b70abdfb4242cb6, type: 3}
+--- !u!114 &114112760829258284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394903317702630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d209cf1cbe383954286d149770e90f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114890240728868636
 MonoBehaviour:
   m_ObjectHideFlags: 1

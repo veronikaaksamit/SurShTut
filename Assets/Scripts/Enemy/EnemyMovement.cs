@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
@@ -7,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     PlayerHealth playerHealth;
     EnemyHealth enemyHealth;
     private UnityEngine.AI.NavMeshAgent nav;
+    public Boolean IsMoving = true;
 
 
     void Awake ()
@@ -25,13 +27,15 @@ public class EnemyMovement : MonoBehaviour
 
     void Update ()
     {
-        if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+        if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && IsMoving)
         {
             nav.SetDestination (player.position);
-            //Debug.Log(player.position);
+            Debug.Log("Is moving");
         }
         else
         {
+            Debug.Log("Is NOT moving");
+            gameObject.isStatic = true;
             nav.enabled = false;
         }
     }

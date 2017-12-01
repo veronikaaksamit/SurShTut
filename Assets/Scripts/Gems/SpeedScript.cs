@@ -16,16 +16,12 @@ public class SpeedScript : MonoBehaviour {
         if (other.gameObject == player)
         {
             PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
-            playerMovement.speed = playerMovement.speed + 10;
+            playerMovement.speed = 30;
         } 
 
         Destroy(gameObject);
-
-        //new WaitForSeconds(20);
+        
     }
-
-    /*IEnumerator<> waiter()
-    {
-    }*/
+    
 
 }
