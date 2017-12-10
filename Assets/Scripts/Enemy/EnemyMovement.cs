@@ -30,11 +30,11 @@ public class EnemyMovement : MonoBehaviour
         if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && IsMoving)
         {
             nav.SetDestination (player.position);
-            Debug.Log("Is moving");
+            //Debug.Log("Is moving");
         }
         else
         {
-            Debug.Log("Is NOT moving");
+            //Debug.Log("Is NOT moving");
             gameObject.isStatic = true;
             nav.enabled = false;
         }
