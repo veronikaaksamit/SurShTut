@@ -13,13 +13,6 @@ public class PlayerShooting2 : MonoBehaviour
     private string m_weaponTextPrefix = "Weapon:  ";
     private static string WEAPON_BUTTON_PREFIX = "Weapon";
 
-    //private Dictionary<string, int> m_buttonNamesToWeaponIndices = 
-    //    new Dictionary<string, int>
-    //    {
-    //        { "Weapon1", 0 },
-    //        { "Weapon2", 1 }
-    //    };
-
     void Awake()
     {
         InitializeWeapons();

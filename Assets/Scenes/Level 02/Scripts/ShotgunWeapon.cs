@@ -11,7 +11,7 @@ using UnityEngine.AI;
 public class ShotgunWeapon : PlayerWeapon
 {
     public int damagePerShot = 10;
-    public int pelletsCount = 15;
+    public int pelletsCount = 19;
     public float fireConeAngle = 45.0f;
     public float timeBetweenBullets = 0.5f;
     public float range = 5f;
