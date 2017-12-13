@@ -10653,7 +10653,7 @@ Prefab:
       objectReference: {fileID: 714828385}
     - target: {fileID: 1131951332741934, guid: 88af1bf878e9f8942af602cd8bfcfab8, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88af1bf878e9f8942af602cd8bfcfab8, type: 2}
@@ -10685,8 +10685,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d598ababa0c1e84681af3929cca2446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GhostSlider: {fileID: 0}
-  PlayerCharacter: {fileID: 0}
+  GhostSlider: {fileID: 949662186}
+  PlayerCharacter: {fileID: 1189503159188376, guid: 5b53829f392a11046a36628be71525e7,
+    type: 2}
   isActive: 0
   chargeTime: 30
   activeTime: 5
