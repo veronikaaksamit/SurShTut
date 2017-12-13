@@ -11,10 +11,10 @@ using UnityEngine.AI;
 public class ShotgunWeapon : PlayerWeapon
 {
     public int damagePerShot = 10;
-    public int pelletsCount = 20;
+    public int pelletsCount = 19;
     public float fireConeAngle = 45.0f;
     public float timeBetweenBullets = 0.5f;
-    public float range = 5f;//how far ray goes and can kill the enemy
+    public float range = 5f;
     public float effectsDisplayTime = 0.2f;
 
     float timer;
@@ -86,17 +86,15 @@ public class ShotgunWeapon : PlayerWeapon
         for (int i = 0; i < shootRays.Count(); ++i)
         {
             var shootRay = shootRays[i];
-            Debug.Log(shootRay.direction);
 
             gunLinePositions.Add(transform.position);
 
             if (Physics.Raycast(shootRay, out shootHit, range, shootableMask))
             {
                 EnemyHealth enemyHealth = shootHit.collider.GetComponent<EnemyHealth>();
-                Debug.Log(shootHit.collider.GetComponent<NavMeshAgent>());
+
                 if (enemyHealth != null)
                 {
-                    Debug.Log("Health");
                     enemyHealth.TakeDamage(damagePerShot, shootHit.point);
                 }
                gunLinePositions.Add(shootHit.point);
@@ -108,8 +106,6 @@ public class ShotgunWeapon : PlayerWeapon
         }
 
         gunLine.SetPositions(gunLinePositions.ToArray());
-        var test = new Vector3[10];
-        gunLine.GetPositions(test);
     }
 
     private bool IsWeaponReloaded()
