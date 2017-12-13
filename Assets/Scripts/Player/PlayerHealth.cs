@@ -19,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
     AudioSource playerAudio;
     PlayerMovement playerMovement;
     PlayerShooting playerShooting;
+    PlayerGhostForm playerGhostForm;
     bool isDead;
     bool damaged;
 
@@ -29,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         playerAudio = GetComponent <AudioSource> ();
         playerMovement = GetComponent <PlayerMovement> ();
         playerShooting = GetComponentInChildren <PlayerShooting> ();
+        playerGhostForm = GetComponent<PlayerGhostForm>();
         currentHealth = startingHealth;
     }
 
@@ -49,6 +51,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage (int amount)
     {
+        if (playerGhostForm != null && playerGhostForm.isActive)
+        {
+            return;
+        }
+
         damaged = true;
 
         currentHealth -= amount;
