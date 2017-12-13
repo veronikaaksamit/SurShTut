@@ -9,7 +9,7 @@ public class RifleWeapon : PlayerWeapon
 {
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;
-    public float range = 100f;//how far ray goes and can kill the enemy
+    public float range = 100f;
     public float effectsDisplayTime = 0.2f;
 
     float timer;
@@ -79,10 +79,9 @@ public class RifleWeapon : PlayerWeapon
         if (Physics.Raycast(shootRay, out shootHit, range, shootableMask))
         {
             EnemyHealth enemyHealth = shootHit.collider.GetComponent<EnemyHealth>();
-            Debug.Log(shootHit.collider.GetComponent<NavMeshAgent>());
+
             if (enemyHealth != null)
             {
-                Debug.Log("Health");
                 enemyHealth.TakeDamage(damagePerShot, shootHit.point);
             }
             gunLine.SetPosition(1, shootHit.point);
