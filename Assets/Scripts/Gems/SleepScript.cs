@@ -5,6 +5,7 @@ namespace Assets.Scripts.Gems
     public class SleepScript:MonoBehaviour
     {
         public int sleepSeconds;
+        
         private GameObject player;
         private GameObject[] enemies;
         private int counter;
@@ -35,6 +36,7 @@ namespace Assets.Scripts.Gems
                 for (int i = 0; i < enemies.Length; i++)
                 {
                     enemies[i].gameObject.GetComponent<EnemyMovement>().IsMoving = false;
+                    enemies[i].gameObject.GetComponent<Animator>().SetBool("IsMoving", false);
                 }
                 Invoke("SleepingEnemies", 1);
                 Debug.Log("ZZZ");
@@ -44,6 +46,7 @@ namespace Assets.Scripts.Gems
                 for (int i = 0; i < enemies.Length; i++)
                 {
                     enemies[i].gameObject.GetComponent<EnemyMovement>().IsMoving = true;
+                    enemies[i].gameObject.GetComponent<Animator>().SetBool("IsMoving", true);
                 }
                 Debug.Log("Awake");
             }

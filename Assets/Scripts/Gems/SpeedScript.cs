@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts.Gems
 {
@@ -35,8 +36,11 @@ namespace Assets.Scripts.Gems
         void SlowDownPlayer()
         {
             PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
-            playerMovement.speed = previousPlayerSpeed;
-            Debug.Log("Slowing down the player to " + previousPlayerSpeed);
+            if (Math.Abs(previousPlayerSpeed - 0.0) > 1)
+            {
+                playerMovement.speed = previousPlayerSpeed;
+                Debug.Log("Slowing down the player to " + previousPlayerSpeed);
+            }
         }
 
 
