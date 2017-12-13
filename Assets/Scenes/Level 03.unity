@@ -2388,8 +2388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1004b021c00e444aba73c7e2273e158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1993453677}
-  playerGhostForm: {fileID: 1993453684}
+  playerHealth: {fileID: 2010287988}
+  playerGhostForm: {fileID: 2010287991}
   enemy: {fileID: 1832878309381424, guid: 0e97610058041dd418779e4792bb0449, type: 2}
   spawnTime: 5
   spawnPoints:
@@ -2407,8 +2407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1004b021c00e444aba73c7e2273e158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1993453677}
-  playerGhostForm: {fileID: 1993453684}
+  playerHealth: {fileID: 2010287988}
+  playerGhostForm: {fileID: 2010287991}
   enemy: {fileID: 1154848713584014, guid: a900ff90edf45254bbd16cf3c495d1c0, type: 2}
   spawnTime: 10
   spawnPoints:
@@ -2426,8 +2426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1004b021c00e444aba73c7e2273e158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1993453677}
-  playerGhostForm: {fileID: 1993453684}
+  playerHealth: {fileID: 2010287988}
+  playerGhostForm: {fileID: 2010287991}
   enemy: {fileID: 1466530739527854, guid: 07fad18042bb195479327b70f5101ae3, type: 2}
   spawnTime: 8
   spawnPoints:
@@ -8679,7 +8679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3f6fb761a421f408bb31064fc70219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1993453683}
+  target: {fileID: 2010287990}
   smoothing: 5
 --- !u!1 &1437600213
 GameObject:
@@ -9217,7 +9217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c9e0011c2ed97428a4efc03b455359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1993453677}
+  playerHealth: {fileID: 2010287988}
 --- !u!95 &1641098394
 Animator:
   serializedVersion: 3
@@ -10564,40 +10564,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1968640132}
   m_Mesh: {fileID: 4300000, guid: f3ae2f327b1ccba488153e136bd96969, type: 3}
---- !u!1 &1993453676 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1131951332741934, guid: 88af1bf878e9f8942af602cd8bfcfab8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2010287987}
---- !u!114 &1993453677 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114903998141782868, guid: 88af1bf878e9f8942af602cd8bfcfab8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2010287987}
-  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
---- !u!4 &1993453683 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4634279693574328, guid: 88af1bf878e9f8942af602cd8bfcfab8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2010287987}
---- !u!114 &1993453684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1993453676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d598ababa0c1e84681af3929cca2446, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GhostSlider: {fileID: 949662186}
-  PlayerCharacter: {fileID: 1189503159188376, guid: 5b53829f392a11046a36628be71525e7,
-    type: 2}
-  isActive: 0
-  chargeTime: 30
-  activeTime: 5
-  stunDuration: 10
 --- !u!1001 &2010287987
 Prefab:
   m_ObjectHideFlags: 0
@@ -10671,9 +10637,60 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4400267365821632, guid: 88af1bf878e9f8942af602cd8bfcfab8, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093058760635902, guid: 88af1bf878e9f8942af602cd8bfcfab8,
+        type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1904065399}
+    - target: {fileID: 114093058760635902, guid: 88af1bf878e9f8942af602cd8bfcfab8,
+        type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 714828385}
+    - target: {fileID: 1131951332741934, guid: 88af1bf878e9f8942af602cd8bfcfab8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88af1bf878e9f8942af602cd8bfcfab8, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2010287988 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114903998141782868, guid: 88af1bf878e9f8942af602cd8bfcfab8,
+    type: 2}
+  m_PrefabInternal: {fileID: 2010287987}
+  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+--- !u!1 &2010287989 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1131951332741934, guid: 88af1bf878e9f8942af602cd8bfcfab8,
+    type: 2}
+  m_PrefabInternal: {fileID: 2010287987}
+--- !u!4 &2010287990 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4634279693574328, guid: 88af1bf878e9f8942af602cd8bfcfab8,
+    type: 2}
+  m_PrefabInternal: {fileID: 2010287987}
+--- !u!114 &2010287991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2010287989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d598ababa0c1e84681af3929cca2446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GhostSlider: {fileID: 0}
+  PlayerCharacter: {fileID: 0}
+  isActive: 0
+  chargeTime: 30
+  activeTime: 5
+  stunDuration: 10
 --- !u!1 &2031283729
 GameObject:
   m_ObjectHideFlags: 0
