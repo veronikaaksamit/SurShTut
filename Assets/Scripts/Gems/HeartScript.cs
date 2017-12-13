@@ -21,7 +21,7 @@ public class HeartScript : MonoBehaviour {
             PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
             if (playerHealth.currentHealth <= 90)
             {
-                playerHealth.currentHealth = 100;
+                playerHealth.currentHealth += 20;
                 healthSlider.GetComponent<Slider>().value = playerHealth.currentHealth;
             }
         } 

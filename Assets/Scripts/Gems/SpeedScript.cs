@@ -5,28 +5,29 @@ namespace Assets.Scripts.Gems
 {
     public class SpeedScript : MonoBehaviour {
     
-        private GameObject player;
-        private float previousPlayerSpeed;
+        private GameObject _player;
+        private float _previousPlayerSpeed = 10;
+        private int slowerSpeed = 10;
 
         void Awake()
         {
-            player = GameObject.FindGameObjectWithTag("Player");
+            _player = GameObject.FindGameObjectWithTag("Player");
         }
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject == player)
+            if (other.gameObject == _player)
             {
-                PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
-                if (playerMovement.speed < 30 && playerMovement.speed > 0)
+                PlayerMovement playerMovement = _player.GetComponent<PlayerMovement>();
+                if (playerMovement.speed < 30 && Math.Abs(playerMovement.speed - slowerSpeed) > 0)
                 {
-                    Debug.Log("Setting previous speed");
-                    previousPlayerSpeed = playerMovement.speed;
+                    _previousPlayerSpeed = playerMovement.speed;
+                    //Debug.Log("Setting previous speed to" + previousPlayerSpeed);
                 }
                 playerMovement.speed = 30;
 
                 gameObject.SetActive(false);
-                Invoke("SlowDownPlayer", 10);
+                Invoke("SlowDownPlayer", slowerSpeed);
                 Destroy(gameObject, 10);
 
             
@@ -35,12 +36,9 @@ namespace Assets.Scripts.Gems
 
         void SlowDownPlayer()
         {
-            PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
-            if (Math.Abs(previousPlayerSpeed - 0.0) > 1)
-            {
-                playerMovement.speed = previousPlayerSpeed;
-                Debug.Log("Slowing down the player to " + previousPlayerSpeed);
-            }
+            PlayerMovement playerMovement = _player.GetComponent<PlayerMovement>();
+            playerMovement.speed = _previousPlayerSpeed;
+            //Debug.Log("Slowing down the player to " + previousPlayerSpeed);
         }
 
 
